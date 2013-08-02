@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency(%q<multi_json>, ["~> 1.7.7"])
-  s.add_dependency(%q<nokogiri>, ["~> 1.4.0"])
+  s.add_dependency(%q<nokogiri>, ["~> 1.5.0"])
   s.add_dependency(%q<ruby-readability>, ["~> 0.2.3"])
   s.add_development_dependency(%q<mocha>, [">= 0"])
 
