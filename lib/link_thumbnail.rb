@@ -1,4 +1,4 @@
-require 'json'
+require 'multi_json'
 require 'nokogiri'
 require 'open-uri'
 require 'readability'
@@ -17,7 +17,7 @@ module LinkThumbnail
       elsif element = doc.xpath('//link[@type="application/json+oembed" and @href]').first
         # oEmbed (JSON)
         oembed_json_response = fetch(element.attributes['href'].value)
-        json = JSON.parse(oembed_json_response)
+        json = MultiJson.load(oembed_json_response)
         if src = json['thumbnail_url']
           # Thumbnail (generic)
           return src
