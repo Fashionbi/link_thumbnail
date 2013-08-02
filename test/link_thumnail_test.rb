@@ -1,8 +1,9 @@
 require 'link_thumbnail'
+require 'minitest'
 require 'minitest/autorun'
-require 'mocha'
+require 'mocha/setup'
 
-class LinkThumbnailTest < MiniTest::Unit::TestCase
+class LinkThumbnailTest < MiniTest::Test
 
   FIXTURES = {
     :opengraph => File.join(File.dirname(__FILE__), "fixtures", "open_graph.html"),
